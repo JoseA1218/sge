@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span id="a"></span>
+    <script>
+        let elemento;
+        elemento=document.getElementById("a");
+
+        let mes=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+        let num=["31","28","31","30","31","30","31","31","30","31","30","31"];
+
+        for (let index = 0; index < mes.length; index++) {
+            document.write(`El mes de ${mes[index]} tiene ${num[index]} dias <br>`);
+        }
+
+    </script>
+
+</body>
+
+</html>

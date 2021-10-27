@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condicional</title>
+</head>
+<body>
+
+    <div id="res"></div>
+    <script>
+        /*
+        let num,num2,med,elemento;
+        num=parseInt(window.prompt("Escribe un numero"));
+        num2=parseInt(window.prompt("Escribe un numero"));
+        
+        med=(num+num2)/2;
+        elemento=document.getElementById("res");
+
+        if (med>=5) {
+            elemento.innerText="Aprobado";
+        } else {
+            elemento.innerText="suspenso matao";
+        }
+        */
+        /*
+        let marca,modelo,elemento,prec;
+        elemento=document.getElementById("res");
+    
+        marca=window.prompt("Introduce la marca del coche");
+        modelo=window.prompt("Introduce el modelo del coche");
+        prec=parseInt(window.prompt("Introduce el precio del coche"));
+
+        
+        
+        if (marca.toLowerCase().trim()=="seat" && modelo.toLowerCase().trim()=="ibiza") {
+            elemento.innerText=`Su coche el ${marca} ${modelo} con un descuento del 10% es un total de ${prec-(prec*0.1)}`;
+        } else if(marca.toLowerCase().trim()=="seat" && modelo.toLowerCase().trim()=="arona"){
+            elemento.innerText=`Su coche el ${marca} ${modelo} con un descuento del 5% ${prec-(prec*0.05)}`;
+        }else{
+            elemento.innerText="No hay";
+        }
+
+        */
+
+        let mes,elemento;
+
+        elemento=document.getElementById("res");
+
+        mes=parseInt(window.prompt("Dame el numero del mes"));
+
+        switch (mes) {
+            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                elemento.innerText="Tiene 31";
+                break;
+            case 4: case 6: case 9: case 11:
+             elemento.innerText="Tiene 30";
+            break;
+            case 2:
+            elemento.innerText="Tiene 28/29";
+            break;
+            default:
+            elemento.innerText="NO existe";
+            break;
+        }
+
+
+
+    </script>
+</body>
+</html>

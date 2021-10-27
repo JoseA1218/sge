@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" id="h">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="b">
+    <div id="hola">a</div>
+    <script>
+        let h=document.getElementById("h")
+        let b=document.getElementById("b");
+        let d=document.getElementById("hola");
+
+        h.addEventListener("click",f,true);
+        b.addEventListener("click",f1,true);
+        d.addEventListener("click",f2,true);
+
+        function f() {
+            console.log("Se pulso el html");
+            
+
+
+        }
+        
+        function f1() {
+            console.log("Se pulso el body");
+        }
+        function f2() {
+            console.log("Se pulso el div");
+            let a=document.createElement("div");
+            let txt=document.createElement("p");
+            txt.innerText="Me quiero ir";
+
+            a.appendChild(txt);
+
+            document.getElementById("b").appendChild(a);
+        }
+    </script>
+</body>
+</html>

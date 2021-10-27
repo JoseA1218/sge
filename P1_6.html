@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span id="x"></span>
+    <input type="radio" name="a" id="ar"><label>Arriba</label><br>
+    <input type="radio" name="a" id="ab"><label>Abajo</label><br>
+    <input type="button" value="Añadir" id="b">
+
+    <script>
+        /*   <ul id="lista">
+        <li>linea</li>
+        <li>linea</li>
+        <li>linea</li>
+        <li>linea</li>
+    </ul><input type="button" value="Añadir elemento" id="b">
+        document.getElementById("b").addEventListener("click", f, false);
+
+        function f() {
+            var list = document.getElementById("lista");
+            var p = document.createElement("li");
+
+            p.innerHTML = "nueva linea";
+
+            list.appendChild(p);
+
+        }
+        */
+
+        document.getElementById("b").addEventListener("click", f, false)
+
+
+        function f() {
+
+            if (document.getElementById("ar").checked == true) {
+                var list = document.getElementById("x");
+                var p = document.createElement("p");
+
+                p.innerHTML = "nueva linea";
+
+                list.insertBefore(p,list.childNodes[0]);
+            }
+            if (document.getElementById("ab").checked == true) {
+                var list = document.getElementById("x");
+                var p = document.createElement("p");
+
+                p.innerHTML = "Linea abajo";
+
+                list.appendChild(p);
+            }
+        }
+        
+
+
+    </script>
+</body>
+
+</html>

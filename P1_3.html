@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span id="a"></span>
+    <script>
+        let elemento, cap, cont;
+        elemento = document.getElementById("a");
+
+
+        parseInt(cont);
+        cont = 0;
+        do {
+            cap = window.prompt("Introduce la capital de finlandia");
+            cont = cont + 1;
+        } while (cap.toLocaleLowerCase() != "helsinki" && cont < 3);
+
+
+        if (cont == 3) {
+            elemento.innerText = "Fin de intentos";
+        } else {
+            elemento.innerText = "bien";
+        }
+
+    </script>
+
+</body>
+
+</html>

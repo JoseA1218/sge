@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="texto" id="txt">
+    <input type="submit" value="Enviar" id="env"><br>
+    <textarea name="texta" id="ta" cols="30" rows="10"></textarea>
+
+    <script>
+        let cont = document.getElementById("txt");
+        let ta = document.getElementById("ta");
+        let b = document.getElementById("env");
+
+        b.addEventListener("click",f,false);
+
+        function f() {
+            let pal=/tonto/;
+            ta.value+=cont.value.replace(pal,"****");
+            ta.value+=`\n`
+        }
+    
+
+        
+    </script>
+</body>
+</html>

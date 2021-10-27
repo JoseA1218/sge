@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div id="a"align="center" >
+        <h1>Manejando Array´s</h1>
+        <h5>Introduce un texto</h5>
+        <textarea name="texto" id="ta" cols="30" rows="10"></textarea><br>
+        <input type="button" value="pulsame" id="b">
+        <div id="res"></div>
+    </div>
+    <script>
+        let b=document.getElementById("b");
+        let ta=document.getElementById("ta");
+        let res=document.getElementById("res");
+        b.addEventListener("click",f,false);
+
+        function f() {
+            popup=window.open("ventana1" ,"", "width=300,height=300,scrollbars=NO");
+            
+
+            let or= ta.value;
+            let pal = or.split(" ");
+
+           /* res.innerText+=`Numero de palabras: ${pal.length}`;
+            res.innerText+=`\n Primera palabra: ${pal[0]}`;
+            res.innerText+=`\n Ultima palabra: ${pal[pal.length-1]}`;
+            res.innerText+=`\n Colocadas al reves: \n ${pal.reverse().join('..')}`;
+            res.innerText+=`\n Ordenadas de la 'a' a la 'z': \n ${pal.sort().join('..')}`;
+            res.innerText+=`\n Ordenadas de la 'z' a la 'a': \n ${pal.sort().reverse().join('..')}`;
+
+            res.innerText+=`\n \n..Hecho`;*/
+            popup.document.writeln(`Numero de palabras: ${pal.length}`);
+            popup.document.writeln("<br>"+`Primera palabra: ${pal[0]}`);
+            popup.document.writeln("<br>"+`Ultima palabra: ${pal[pal.length-1]}`);
+            popup.document.writeln("<br>"+`Colocadas al reves:`+"<br>"+` ${pal.reverse().join('..')}`);
+            popup.document.writeln("<br>"+`Ordenadas de la 'a' a la 'z':`+"<br>"+` ${pal.sort().join('..')}`);
+            popup.document.writeln("<br>"+`Ordenadas de la 'z' a la 'a': `+"<br>"+` ${pal.sort().reverse().join('..')}`);
+            popup.document.writeln("<br><br>"+`..Hecho`);
+
+
+       }
+            
+    </script>
+</body>
+</html>

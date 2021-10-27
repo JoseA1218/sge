@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: solid;
+        }
+
+        td {}
+
+        #su {
+            color: white;
+            background-color: blue;
+            width: 178px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <table align="center">
+            <tr>
+                <th>Sign Up</th>
+            </tr>
+            <tr>
+                <td>
+                    <label>Username</label><br>
+                    <input type="text" name="Usern" id="un">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Email</label><br>
+                    <input type="text" name="Email" id="em">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Password</label><br>
+                    <input type="password" name="pass" id="pass">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Confirm Password</label><br>
+                    <input type="password" name="cpass" id="cpass">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="SING UP" id="su">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+
+        let b = document.getElementById("su");
+
+        b.addEventListener("click", f, false);
+
+        function f() {
+            let us = document.getElementById("un").value;
+            let em = document.getElementById("em").value;
+            let ps = document.getElementById("pass").value;
+            let cps = document.getElementById("cpass").value;
+
+            // window.alert(us.length);
+            if (us.length < 3 || us.length > 25) {
+                window.alert("no");
+            }
+            let regemail = /[a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]+/;
+
+            if (regemail.test(em)) {
+                window.alert("si");
+            }
+            let regepass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?_&])[A-Za-z\d@$!%_*?&]{8,}$/;
+
+
+            if (regepass.test(ps)) {
+                window.alert("Pass bien");
+            } else {
+                window.alert("pass no bien");
+            }
+            if (ps == cps) {
+                window.alert("coinciden");
+            } else {
+                window.alert("no coinciden");
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
